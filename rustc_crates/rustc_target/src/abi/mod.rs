@@ -168,7 +168,7 @@ impl TargetDataLayout {
             ));
         }
 
-        if dl.pointer_size.bits() != target.pointer_width.into() {
+        if dl.pointer_size.bits_usize() as u32 != target.pointer_width {
             return Err(format!(
                 "inconsistent target specification: \"data-layout\" claims \
                  pointers are {}-bit, while \"target-pointer-width\" is `{}`",
