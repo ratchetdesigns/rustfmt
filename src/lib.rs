@@ -1,4 +1,3 @@
-#![feature(rustc_private)]
 #![deny(rust_2018_idioms)]
 #![warn(unreachable_pub)]
 #![recursion_limit = "256"]
@@ -11,16 +10,6 @@ extern crate derive_new;
 extern crate lazy_static;
 #[macro_use]
 extern crate log;
-
-// N.B. these crates are loaded from the sysroot, so they need extern crate.
-extern crate rustc_ast;
-extern crate rustc_ast_pretty;
-extern crate rustc_data_structures;
-extern crate rustc_errors;
-extern crate rustc_expand;
-extern crate rustc_parse;
-extern crate rustc_session;
-extern crate rustc_span;
 
 use std::cell::RefCell;
 use std::collections::HashMap;
